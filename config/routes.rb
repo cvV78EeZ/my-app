@@ -3,4 +3,7 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
+
+  #PostController
+  get '/', to: 'posts#toppage', as: 'toppage_posts'
 end
