@@ -6,4 +6,7 @@ Rails.application.routes.draw do
 
   #PostController
   get '/', to: 'posts#toppage', as: 'toppage_posts'
+
+  #CounturiesController
+  get '/countories', to: 'countries#toppage', as: 'toppage_countries'
 end
