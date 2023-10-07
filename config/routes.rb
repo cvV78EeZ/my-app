@@ -8,5 +8,8 @@ Rails.application.routes.draw do
   get '/', to: 'posts#toppage', as: 'toppage_posts'
 
   #CounturiesController
-  get '/countories', to: 'countries#toppage', as: 'toppage_countries'
+  get '/countries', to: 'countries#toppage', as: 'toppage_countries'
+  post '/countries', to: 'countries#create', as: 'create_countries'
+
+  get '/countries/japan', to: 'countries#japan', as: 'japan_countries' 
 end
