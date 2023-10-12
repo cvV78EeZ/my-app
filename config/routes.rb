@@ -12,4 +12,5 @@ Rails.application.routes.draw do
   post '/countries', to: 'countries#create', as: 'create_countries'
 
   get '/countries/japan', to: 'countries#japan', as: 'japan_countries' 
+  post '/countries/jpan', to: 'countries#japanCreate', as: 'japan_create'
 end

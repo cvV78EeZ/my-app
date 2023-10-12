@@ -1,8 +1,8 @@
 <div class="container">
   <div class="row">
     <div class="col-md-8 mx-auto post-form-container">
-      <h2 class="h2">日本のおすすめスポット登録</h2>
-      <%= form_with(url: create_post_path, local: true, method: :post, html: { class: 'post-form' } ) do |f| %>
+      <h2 class="country-title-h2">日本のおすすめスポット登録</h2>
+      <%= form_with(url: japan_create_path, local: true, method: :post, html: { class: 'post-form' } ) do |f| %>
 
         <div class="form-group">
           <%= f.label "おすすめスポットを入力してね", class: 'form-label' %>
