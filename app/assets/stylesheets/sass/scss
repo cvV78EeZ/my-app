@@ -1,0 +1,33 @@
+header {
+  background-color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  width: 200px;
+  height: auto;
+  margin-left: 5px;
+}
+
+.logo-img {
+  width: 100%;
+}
+
+.header-navigation {
+  margin-right: 5px;
+}
+
+.header-navigation li {
+  padding: 0 30px;
+  text-align: center;
+  list-style-type: none;
+}
+
+.header-navigation li a {
+  color: #333;
+  font-weight: 700;
+  font-size: 16px;
+  text-decoration: none;
+}
