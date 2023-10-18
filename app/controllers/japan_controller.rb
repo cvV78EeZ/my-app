@@ -1,11 +1,27 @@
 class JapanController < ApplicationController
     def new
+        @post = Japan.new
         render :new 
       end
 
       def create
-        redirect_to new_japan_path
-      end  
+        @post = Japan.new(Japan_params)
+
+        if params[:Japan][:image]
+          @post.image.attach(params[:Japan][:image])
+        end
+    
+        if @post.save
+          redirect_to index_post_path, notice: '登録しました'
+        else
+          render :new, status: :unprocessable_entity
+        end
+      end
+    
+      private
+      def post_params
+        params.require(:post).permit(:title, :body, :image)
+      end
 
       def index
         @title = params[:title]
