@@ -5,7 +5,7 @@ class JapanController < ApplicationController
       end
 
       def create
-        @post = Japan.new(Japan_params)
+        @post = japan_params
 
         if params[:Japan][:image]
           @post.image.attach(params[:Japan][:image])
@@ -19,8 +19,8 @@ class JapanController < ApplicationController
       end
     
       private
-      def post_params
-        params.require(:post).permit(:title, :body, :image)
+      def japan_params
+        params.require(:japan).permit(:title, :body, :image)
       end
 
       def index
