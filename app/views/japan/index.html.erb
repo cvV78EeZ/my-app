@@ -1,0 +1,17 @@
+<div class="post-list">
+  <h1>日本推しスポット一覧ページ</h1>
+  <% @posts.each do |post| %>
+    <div class="post">
+      <div class="header">
+        <h2 class="title"><%= post.title %></h2>
+        <p class="timestamp"><%= post.created_at.strftime("%B %d, %Y") %></p>
+      </div>
+      <div class="body">
+        <p class="content"><%= post.body %></p>
+      </div>
+      <div class="image">
+        <%= image_tag(post.image) if post.image.attached? %>
+      </div>
+    </div>
+  <% end %>
+</div>
